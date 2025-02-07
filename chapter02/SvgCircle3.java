@@ -9,7 +9,7 @@ public class SvgCircle3 {
 
         public static void printXXX(int x, int y, double r) {
             System.out.printf("<svg height= '100' width= '1000'> \n" +
-                    " <circle cx='%d' cy='%d' r='%f'/> \n" +
+                    " <circle cx='%d' cy='%d' r='%2f'/> \n" +
                     "</svg>", x,y,r);
         }
 }
