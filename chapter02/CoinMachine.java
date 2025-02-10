@@ -5,6 +5,7 @@ public class CoinMachine {
     public static void main (String []args){
         System.out.println("Please enter the amount of money:");
         double amount = new Scanner(System.in).nextDouble();
+        //without that double will lead to error 
         double cent = amount * 100;
         int cents = (int) cent;
         System.out.printf("%d x 2 € \n", cents/200);
