@@ -4,18 +4,19 @@ public class PrintUnderline {
         string = string.toLowerCase();
         search = search.toLowerCase();
 
-        int before, index = 0;
-         for (int i = 0; string.indexOf(search, index + 1) <= -1;){
-             for (int j = 0; j < ; j++) {
-                 System.out.print(' ');
+        String secondline = "";
+        //If not found condition is false - why search.length
+         for (int index = 0;( index = string.indexOf(search, index)) >= 0; index += search.length()){
+
+             for (int j = secondline.length(); j < index; j++) {
+                 secondline += " ";
              }
              for (int k = 0; k < search.length(); k++) {
-                 System.out.print('_');
+                 secondline += "_";
              }
-             before = index;
 
          }
-
+        System.out.println(secondline);
     }
 
     public static void main(String[] args) {
