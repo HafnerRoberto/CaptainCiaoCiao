@@ -34,7 +34,8 @@ public class Radio {
         return this.isOn;
     }
 
-    public String toanString(){
+    @Override
+    public String toString(){
         return "Radio[volume="+this.volume + " is " + (isOn ? "on":"off") + "]";
     }
 

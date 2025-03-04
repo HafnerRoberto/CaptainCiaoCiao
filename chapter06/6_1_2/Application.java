@@ -10,7 +10,7 @@ public class Application {
         grandmasOldRadio.volumeDown();
         grandmasOldRadio.volumeUp();
         System.out.println(grandmasOldRadio.volume);
-        System.out.println(grandmasOldRadio.toanString());
+        System.out.println(grandmasOldRadio.toString());
         grandmasOldRadio.off();
 
 
