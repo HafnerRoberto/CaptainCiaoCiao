@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 public class Radio {
     private static final int UPPERLIMIT = 100;
     private static final int DOWNERLIMIT = 0;
@@ -14,7 +16,7 @@ public class Radio {
     }
 
     void setModulation(Modulation modulation){
-        this.modulation = modulation;
+        this.modulation = Objects.requireNonNull(modulation);
     }
 
     Modulation getModulation(){
@@ -59,7 +61,7 @@ public class Radio {
 
     @Override
     public String toString(){
-        return "Radio[volume="+this.volume + " is " + (isOn ? "on":"off") + this.modulation +"]";
+        return "Radio[volume="+this.volume + " is " + (isOn ? "on":"off") + this.modulation.toString() +"]";
     }
 
 }
