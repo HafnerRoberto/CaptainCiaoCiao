@@ -1,15 +1,15 @@
 import java.util.ArrayList;
 
 public class Ship {
-    private ArrayList<Radio> arrayList = new ArrayList<Radio>();
+    private ArrayList<ElectricDevice> arrayList = new ArrayList<ElectricDevice>();
 
-    public void addRadio(Radio radio) {
-        this.arrayList.add(radio);
+    public void addRadio(ElectricDevice electricDevice) {
+        this.arrayList.add(electricDevice);
     }
 
     public int numberOfRadiosSwitchedOn() {
         int numberOfRadiosSwitchedOn = 0;
-        for (Radio radio : arrayList) {
+        for (ElectricDevice radio : arrayList) {
             if (radio.isOn()) {
                 numberOfRadiosSwitchedOn++;
             }

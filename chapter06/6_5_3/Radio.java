@@ -1,13 +1,14 @@
 import java.util.Objects;
 
-public class Radio {
+
+public class Radio extends ElectricDevice{
 
     public enum Modulation{
         AM,FM
     }
     private static final int UPPERLIMIT = 100;
     private static final int DOWNERLIMIT = 0;
-    private boolean isOn;
+
     private int volume = 1;
     private double frequency;
     private Modulation modulation = Modulation.AM;
@@ -61,23 +62,10 @@ public class Radio {
         return volume;
     }
 
-    public void on(){
-        this.isOn = true;
-        System.out.println("on");
-    }
-
-    public void off(){
-        this.isOn = false;
-        System.out.println("off");
-    }
-
-    public boolean isOn(){
-        return this.isOn;
-    }
 
     @Override
     public String toString(){
-        return "Radio[volume="+this.volume + " is " + (isOn ? "on":"off") + this.modulation.toString() +"]";
+        return "Radio[volume="+this.volume + " is " + (this.isOn() ? "on":"off") + this.modulation.toString() +"]";
     }
 
 }
