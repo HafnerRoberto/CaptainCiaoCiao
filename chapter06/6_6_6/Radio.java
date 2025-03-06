@@ -44,6 +44,7 @@ public class Radio extends ElectricDevice{
         return frequency;
     }
 
+
     public static double stationNameToFrequency (String string){
         switch (string){
             case "Walking the plank":
@@ -61,7 +62,9 @@ public class Radio extends ElectricDevice{
     public int getVolume() {
         return volume;
     }
-
+    public void setVolumeZero(){
+        this.volume = 0;
+    }
 
     @Override
     public String toString(){

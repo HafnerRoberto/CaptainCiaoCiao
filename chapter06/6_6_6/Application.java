@@ -7,14 +7,19 @@ public class Application {
         radio1.on();
         Radio radio2 = new Radio();
         radio2.on();
-
+        radio.setVolumeZero();
         IceMachine iceMachine = new IceMachine();
         iceMachine.on();
 
         Ship ship = new Ship();
 
+
         ship.addElectricDevice(radio);
+        ship.addElectricDevice(radio1);
+        ship.addElectricDevice(radio2);
         ship.addElectricDevice(iceMachine);
+        ship.numberOfElements();
+
 
     }
 }

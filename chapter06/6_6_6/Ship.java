@@ -6,7 +6,12 @@ public class Ship {
 
     public void addElectricDevice(ElectricDevice electricDevice) {
         Objects.requireNonNull(electricDevice);
-        this.arrayList.add(electricDevice);
+        if ( electricDevice instanceof Radio && ((Radio) electricDevice).getVolume() != 0){
+            System.out.println("is instance of Radio");
+            //this.arrayList.add(electricDevice);
+        } else {
+            this.arrayList.add(electricDevice);
+        }
     }
 
     public int numberOfRadiosSwitchedOn() {
@@ -17,5 +22,9 @@ public class Ship {
             }
         }
         return numberOfRadiosSwitchedOn;
+    }
+
+    public void numberOfElements(){
+        System.out.println(this.arrayList.size());
     }
 }
