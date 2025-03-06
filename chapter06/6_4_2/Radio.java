@@ -5,7 +5,6 @@ public class Radio {
     public enum Modulation{
         AM,FM
     }
-
     private static final int UPPERLIMIT = 100;
     private static final int DOWNERLIMIT = 0;
     private boolean isOn;
